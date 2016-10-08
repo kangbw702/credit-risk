@@ -21,9 +21,9 @@ class Scheduler(object):
             freqValue = np.int(x)
         if (freq.upper().find('D') != -1): delta = relativedelta(days=+  freqValue)
         if (freq.upper().find('W') != -1): delta = relativedelta(weeks=+  freqValue)
-        if (freq.find('M') != -1): delta = relativedelta(months=+ freqValue)
-        if (freq.find('Y') != -1): delta = relativedelta(years=+ freqValue)
-        if (freq.find('ZERO') != -1): delta = relativedelta(years=+ freqValue)
+        if (freq.upper().find('M') != -1): delta = relativedelta(months=+ freqValue)
+        if (freq.upper().find('Y') != -1): delta = relativedelta(years=+ freqValue)
+        if (freq.upper().find('ZERO') != -1): delta = relativedelta(years=+ freqValue)
         return delta
 
     def only_numerics(self, seq):
